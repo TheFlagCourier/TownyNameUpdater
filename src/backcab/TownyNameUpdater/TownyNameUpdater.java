@@ -6,6 +6,7 @@ import java.util.logging.Logger;
 
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.Plugin;
@@ -44,7 +45,7 @@ public class TownyNameUpdater extends JavaPlugin implements Listener{
 		Bukkit.getPluginManager().registerEvents(this, this);
 	}
 	
-	@EventHandler
+	@EventHandler (priority = EventPriority.LOW)
 	public void onLogin(PlayerJoinEvent event){
 		String currName = event.getPlayer().getName();
 		UUID id = event.getPlayer().getUniqueId();

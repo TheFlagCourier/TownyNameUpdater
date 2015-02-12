@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="TownyNameUpdater" default="jar" basedir=".">
 	<property name="build" value="bin" />
+	<property name="out" value="out" />
 	<property file="build.properties" />
 	<property environment="env"/>
 
 	<target name="clean">
 		<delete dir="${build}" />
+		<delete dir="${out}" />
 	</target>
 
 	<target name="init" depends="clean">
 		<mkdir dir="${build}" />
+		<mkdir dir="${out}" />
 		<mkdir dir="${env.LIB}" />
 
 	</target>
@@ -35,6 +38,6 @@
 		<!-- Update the version in the plugin.yml -->
 		<copy file="./src/plugin.yml" tofile="${build}/plugin.yml" overwrite="true" />
 		<!-- Build the jar file -->
-		<jar basedir="${build}" destfile="${build}/TownNameUpdater.jar" />
+		<jar basedir="${build}" destfile="${out}/TownNameUpdater.jar" />
 	</target>
 </project>

@@ -1,4 +1,5 @@
 name: TownyNameUpdater
-version: {BUILD_VER}
+version: 1.0
+softdepend: [Towny, Vault]
 description: TownyNameUpdater
 main: backcab.TownyNameUpdater.TownyNameUpdater
