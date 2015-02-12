@@ -1,4 +1,4 @@
 name: TownyNameUpdater
-version: 1.0
+version: {BUILD_VER}
 description: TownyNameUpdater
 main: backcab.TownyNameUpdater.TownyNameUpdater

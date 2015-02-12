@@ -10,10 +10,16 @@ public class PluginFile {
 	private YamlConfiguration file;
 	private File f;
 	
-	protected PluginFile(TownyNameUpdater p, String name){
+	protected PluginFile(TownyNameUpdater p, String name, boolean copy){
 		f = new File(p.getDataFolder().toString() + "/" + name + ".yml");
 		if(!f.exists()){
-			p.saveResource(name + ".yml", false);
+			if(copy){
+				p.saveResource(name + ".yml", false);
+			} else {
+				try {
+					f.createNewFile();
+				} catch (IOException e) {}
+			}
 		}
 		file = YamlConfiguration.loadConfiguration(f);
 	}

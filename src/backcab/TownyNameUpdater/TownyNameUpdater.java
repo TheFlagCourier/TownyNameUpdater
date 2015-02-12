@@ -39,7 +39,7 @@ public class TownyNameUpdater extends JavaPlugin implements Listener{
 			}
 		}, 0);
 		
-		map = new PluginFile(this, "playermap");
+		map = new PluginFile(this, "playermap", false);
 		
 		Bukkit.getPluginManager().registerEvents(this, this);
 	}
