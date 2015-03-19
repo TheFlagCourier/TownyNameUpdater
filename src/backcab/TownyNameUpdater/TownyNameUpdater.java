@@ -15,6 +15,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import com.palmergames.bukkit.towny.object.Resident;
 import com.palmergames.bukkit.towny.object.TownyUniverse;
 
+
 public class TownyNameUpdater extends JavaPlugin implements Listener{
 
 	private PluginFile map;
