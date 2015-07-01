@@ -1,5 +1,6 @@
 package backcab.TownyNameUpdater;
 
+import java.io.IOException;
 import java.util.UUID;
 
 import org.bukkit.Bukkit;
@@ -42,9 +43,14 @@ public class TownyNameUpdater extends JavaPlugin implements Listener{
 			try {
 				Resident r = TownyUniverse.getDataSource().getResident(oldName);
 				TownyUniverse.getDataSource().renamePlayer(r, currName);
+			} catch (Exception e) {e.printStackTrace();}
+			
+			try {
 				map.getFile().set(id.toString(), currName);
 				map.save();
-			} catch (Exception e) {e.printStackTrace();}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 			return;
 		}
 	}
