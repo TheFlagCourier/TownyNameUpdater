@@ -1,5 +1,5 @@
 name: TownyNameUpdater
 version: 1.0
-softdepend: [Towny, Vault]
+depend: [Towny]
 description: TownyNameUpdater
-main: backcab.TownyNameUpdater.TownyNameUpdater
+main: com.palmergames.townynameupdater.TownyNameUpdater
