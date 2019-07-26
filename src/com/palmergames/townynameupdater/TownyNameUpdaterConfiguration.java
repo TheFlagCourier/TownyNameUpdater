@@ -14,8 +14,9 @@ public class TownyNameUpdaterConfiguration {
 
 		// read the config.yml into memory
 		config = new CommentedConfiguration(file);
-		if (!config.load())
+		if (!config.load()) {
 			System.out.print("Failed to load Config!");
+		}
 
 		CommentedConfiguration newConfig = new CommentedConfiguration(file);
 		newConfig.load();
@@ -26,13 +27,11 @@ public class TownyNameUpdaterConfiguration {
 	}
 
 	private static void setProperty(String root, Object value) {
-
 		config.set(root.toLowerCase(), value.toString());
 	}
 
 
 	public static String getString(String root) {
-
 		String data = config.getString(root.toLowerCase());
 		if (data == null) {
 			return "";
