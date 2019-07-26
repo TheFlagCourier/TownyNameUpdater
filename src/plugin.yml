@@ -1,5 +1,5 @@
 name: TownyNameUpdater
-version: 3.0
+version: 2.5
 depend: [Towny]
 description: TownyNameUpdater
 main: com.palmergames.townynameupdater.TownyNameUpdater

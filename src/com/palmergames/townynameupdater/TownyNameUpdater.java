@@ -1,6 +1,6 @@
 package com.palmergames.townynameupdater;
 
-import com.palmergames.bukkit.towny.TownyUniverse;
+import com.palmergames.bukkit.towny.object.TownyUniverse;
 import com.palmergames.bukkit.towny.object.Resident;
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
@@ -35,8 +35,8 @@ public class TownyNameUpdater extends JavaPlugin implements Listener {
 
 		if (!oldName.equals(currName)) {
 			try {
-				Resident r = TownyUniverse.getInstance().getDataSource().getResident(oldName);
-				TownyUniverse.getInstance().getDataSource().renamePlayer(r, currName);
+				Resident r = TownyUniverse.getDataSource().getResident(oldName);
+				TownyUniverse.getDataSource().renamePlayer(r, currName);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
