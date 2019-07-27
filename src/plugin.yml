@@ -1,5 +1,6 @@
 name: TownyNameUpdater
 version: 2.5
+api-version: 1.13
 depend: [Towny]
 description: TownyNameUpdater
 main: com.palmergames.townynameupdater.TownyNameUpdater
