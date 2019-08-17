@@ -11,7 +11,7 @@ public class TownyNameUpdaterConfiguration {
 	public static void loadConfig(String filepath) {
 		if (!FileMgmt.checkOrCreateFile(filepath)) {
 			System.out.println("Failed to create playermap.yml!");
-			System.out.println("Will not continue to load TownyNameUopdater!");
+			System.out.println("Will not continue to load TownyNameUpdater!");
 			return;
 		}
 		File file = new File(filepath);
@@ -20,7 +20,7 @@ public class TownyNameUpdaterConfiguration {
 		config = new CommentedConfiguration(file);
 		if (!config.load()) {
 			System.out.print("Failed to load Config!");
-			System.out.println("Will not continue to load TownyNameUopdater!");
+			System.out.println("Will not continue to load TownyNameUpdater!");
 			return;
 		}
 
