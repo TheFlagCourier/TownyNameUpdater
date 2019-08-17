@@ -9,13 +9,19 @@ public class TownyNameUpdaterConfiguration {
 	private static CommentedConfiguration config;
 
 	public static void loadConfig(String filepath) {
-
-		File file = FileMgmt.checkYMLExists(new File(filepath));
+		if (!FileMgmt.checkOrCreateFile(filepath)) {
+			System.out.println("Failed to create playermap.yml!");
+			System.out.println("Will not continue to load TownyNameUpdater!");
+			return;
+		}
+		File file = new File(filepath);
 
 		// read the config.yml into memory
 		config = new CommentedConfiguration(file);
 		if (!config.load()) {
 			System.out.print("Failed to load Config!");
+			System.out.println("Will not continue to load TownyNameUpdater!");
+			return;
 		}
 
 		CommentedConfiguration newConfig = new CommentedConfiguration(file);
