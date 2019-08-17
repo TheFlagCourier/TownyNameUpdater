@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.palmergames.bukkit.towny</groupId>
+    <artifactId>TownyNameUpdater</artifactId>
+    <packaging>jar</packaging>
+    <version>3.0</version>
+
+    <licenses>
+        <license>
+            <name>CC BY-NC-ND 3.0</name>
+            <url>http://creativecommons.org/licenses/by-nc-nd/3.0/</url>
+            <comments>Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported</comments>
+        </license>
+    </licenses>
+
+    <organization>
+        <name>TownyAdvanced</name>
+        <url>https://github.com/TownyAdvanced</url>
+    </organization>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <project.bukkitAPIVersion>1.14</project.bukkitAPIVersion>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!-- For use with GitHub Package Registry -->
+    <!-- Requires repo write access, and proper local maven configuration -->
+    <!-- https://help.github.com/en/articles/about-github-package-registry -->
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub TownyAdvanced Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/TownyAdvanced</url>
+        </repository>
+    </distributionManagement>
+    <scm>
+        <connection>scm:git:https://github.com/TownyAdvanced/TownyNameUpdater.git</connection>
+        <developerConnection>scm:git:https://github.com/TownyAdvanced/TownyNameUpdater.git</developerConnection>
+        <url>https://github.com/TownyAdvanced/TownyNameUpdater</url>
+    </scm>
+
+    <repositories>
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.bukkit</groupId>
+            <artifactId>bukkit</artifactId>
+            <version>1.14.4-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.palmergames.bukkit.towny</groupId>
+            <artifactId>Towny</artifactId>
+            <version>0.94.0.6</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <defaultGoal>clean package</defaultGoal>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+
+        <sourceDirectory>src/main</sourceDirectory>
+    </build>
+</project>
