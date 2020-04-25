@@ -7,7 +7,7 @@
     <groupId>com.palmergames.bukkit.towny</groupId>
     <artifactId>TownyNameUpdater</artifactId>
     <packaging>jar</packaging>
-    <version>4.0</version>
+    <version>5.0</version>
 
     <licenses>
         <license>
@@ -61,7 +61,7 @@
         <dependency>
             <groupId>com.palmergames.bukkit.towny</groupId>
             <artifactId>Towny</artifactId>
-            <version>0.94.0.6</version>
+            <version>0.96.1.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
