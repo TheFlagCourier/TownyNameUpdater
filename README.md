@@ -1,6 +1,6 @@
 > **Discontinued**
-> As of [Towny 0.96.5.2](), Towny is able to keep track of player UUIDs on it's own.  
-> Therefore, use of TownyNameUpdater is no longer required.
+> As of [Towny 0.96.5.2](https://github.com/TownyAdvanced/Towny/releases/tag/0.96.5.2), Towny is able to keep track of player UUIDs on it's own.  
+> Therefore, the use of TownyNameUpdater is no longer required.
 
 ## TownyNameUpdater
 Originally developed and designed by [backcab](https://github.com/xf57212/TownyNameUpdater), and maintained by the [TownyAdvanced project](https://github.com/TownyAdvanced).
