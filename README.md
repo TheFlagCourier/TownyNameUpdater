@@ -1,8 +1,8 @@
-This project was developed and designed by backcab
-It is now maintained by Towny Advanced.
+> **Discontinued**
+> As of [Towny 0.96.5.2](), Towny is able to keep track of player UUIDs on it's own.  
+> Therefore, use of TownyNameUpdater is no longer required.
 
-This project is made specifically to be used with Towny (http://palmergames.com/towny)
+## TownyNameUpdater
+Originally developed and designed by [backcab](https://github.com/xf57212/TownyNameUpdater), and maintained by the [TownyAdvanced project](https://github.com/TownyAdvanced).
 
-This project only works with Towny versions 0.89.2.2 and newer (http://palmergames.com/category/towny-download/towny-dev-build/)
-
-This project only works with Spigot or Bukkit versions using Minecraft 1.7 and newer.
+This project was a requirement for [Towny](https://github.com/TownyAdvanced/Towny), versions 0.89.2.2 &ndash; 0.96.5.1, on Bukkit-based servers operating in online mode, and was used to track username changes.
